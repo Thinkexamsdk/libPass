@@ -12,7 +12,7 @@ publishing {
             artifactId = 'tesdk'
             version = '1.0.0'
 
-            artifact file('com/ginger/te/1.0.0/thinkexamsdk-1.0.0.aar')
+            artifact file('te/1.0.0/sdk-1.0.0.aar')
         }
     }
     repositories {
