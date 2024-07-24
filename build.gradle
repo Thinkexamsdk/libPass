@@ -1,0 +1,28 @@
+plugins {
+    id 'maven-publish'
+}
+
+group = 'com.ginger.te'
+version = '1.0.0'
+
+publishing {
+    publications {
+        mavenAar(MavenPublication) {
+            groupId = 'com.ginger.te'
+            artifactId = 'tesdk'
+            version = '1.0.0'
+
+            artifact file('com/ginger/te/1.0.0/thinkexamsdk-1.0.0.aar')
+        }
+    }
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = uri("https://maven.pkg.github.com/Thinkexamsdk/libPass")
+            // credentials {
+            //     username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+            //     password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+            // }
+        }
+    }
+}
