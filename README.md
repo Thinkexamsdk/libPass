@@ -29,35 +29,39 @@
 </p>
 
 <h3> 2.2 Create a ProctorSDK object </h3>
-<p>ProtorSDK proctorSdk = new ProctorSDK();
+<p>
+            
+    ProtorSDK proctorSdk = new ProctorSDK();
 </p>
 
 <h3> 2.3 Setup Proctoring details </h3>
 <p>           
              
-            proctorSdk.registerBroadcast ( this );
-            
-            proctorSdk.setupClientConfiguration ( "https://vikrant.thinkexam.com" , "vikrant.thinkexam.com" );
+    proctorSdk.registerBroadcast ( this );
     
-            proctorSdk.setupStudentDetails ( studentDataPojo.getSTUDENT_NAME () , "tarun1245663@gamil.com" , "https://dn2d9bgg1d2qf.cloudfront.net/studentTestLiveImages/535/13/32956902/1/13_1714634403903.png" );
-            
-            proctorSdk.setupTestDetails ( "Test Tarun 10Jun2024" , "10-06-2024" , "" , "100" );
-            
-            proctorSdk.setupStreamingDetails ( "1" , "0" , "5000" , "0" , "1" );
-            
-            proctorSdk.enableSettings ( "1" , "1" , "1" , "0" , "1" , "1" , "1" , "1" , "1" , "1" , "1" );
-            
-            proctorSdk.enableUFMSettings ( "1" , "1" , "1" , "1" , "1" , "1" , "1" );
+    proctorSdk.setupClientConfiguration ( "https://vikrant.thinkexam.com" , "vikrant.thinkexam.com" );
+
+    proctorSdk.setupStudentDetails ( studentDataPojo.getSTUDENT_NAME () , "tarun1245663@gamil.com" , "https://dn2d9bgg1d2qf.cloudfront.net/studentTestLiveImages/535/13/32956902/1/13_1714634403903.png" );
+    
+    proctorSdk.setupTestDetails ( "Test Tarun 10Jun2024" , "10-06-2024" , "" , "100" );
+    
+    proctorSdk.setupStreamingDetails ( "1" , "0" , "5000" , "0" , "1" );
+    
+    proctorSdk.enableSettings ( "1" , "1" , "1" , "0" , "1" , "1" , "1" , "1" , "1" , "1" , "1" );
+    
+    proctorSdk.enableUFMSettings ( "1" , "1" , "1" , "1" , "1" , "1" , "1" );
 </p>
 
 <h3> 2.4 Start Validation Process </h3>
 <p>
     
-        proctorSdk.initializeProctorInfo ( this );
+    proctorSdk.initializeProctorInfo ( this );
 </p>
 
 <h3> 2.5 Implement and set ProctorInfo Result Listener (ProctoringInfoListener) </h3>
-<p>proctorSdk.setProctoringInfoListener ( this );
+<p>
+    
+    proctorSdk.setProctoringInfoListener ( this );
             
              
     @Override
@@ -78,44 +82,45 @@
 <h3> 3.1 Use the following method if you are in the same activity/fragment </h3>
 <p> 
         
-        proctorSdk.startProctoring ( this, testMainLayout,resultProctoringInfo);
+    proctorSdk.startProctoring ( this, testMainLayout,resultProctoringInfo);
 </p>
 <h3> 3.2 Use the following method if you are in a different activity/fragment, delegate ResultProctoringInfo received earlier. </h3>
 <p>         
     
-        ProctorSDK proctorSdk = new ProctorSDK ();
-        
-        proctorSdk.setupClientConfiguration("https://vikrant.thinkexam.com", "vikrant.thinkexam.com");
-        
-        proctorSdk.setupTestDetails("Test Tarun 10Jun2024", "10-06-2024", "", "100");
-        
-        proctorSdk.startProctoring ( this, parentLayout,resultProctoringInfo);
+    ProctorSDK proctorSdk = new ProctorSDK ();
+    
+    proctorSdk.setupClientConfiguration("https://vikrant.thinkexam.com", "vikrant.thinkexam.com");
+    
+    proctorSdk.setupTestDetails("Test Tarun 10Jun2024", "10-06-2024", "", "100");
+    
+    proctorSdk.startProctoring ( this, parentLayout,resultProctoringInfo);
 </p>
 <h3> 3.3 Use lifecycle methods </h3>
 <p> 
     
-        @Override
-          public void onResume() {
-                super.onResume();
-                 proctorSdk.resumeProctoring ();
-                }
-                
-          @Override
-          public void onPause() {
-                super.onPause();
-                 proctorSdk.pauseProctoring ();
-                }
-        
-          @Override
-          public void onDestroy() {
-                super.onDestroy();
-                 proctorSdk.closeProctoring ();
-                }
+      @Override
+      public void onResume() {
+            super.onResume();
+             proctorSdk.resumeProctoring ();
+            }
+            
+      @Override
+      public void onPause() {
+            super.onPause();
+             proctorSdk.pauseProctoring ();
+            }
+    
+      @Override
+      public void onDestroy() {
+            super.onDestroy();
+             proctorSdk.closeProctoring ();
+            }
 </p>
 
 <h3> 3.4 At last Submit the test </h3>
 <p>
-        proctorSdk.submitTest()
+    
+    proctorSdk.submitTest()
 </p>
 
 </body>
