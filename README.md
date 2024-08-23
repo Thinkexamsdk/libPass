@@ -82,7 +82,7 @@
 <h3> 3.1 Use the following method if you are in the same activity/fragment </h3>
 <p> 
         
-    proctorSdk.startProctoring ( this, testMainLayout,resultProctoringInfo);
+    proctorSdk.startProctoring ( this, rootView,resultProctoringInfo);
 </p>
 <h3> 3.2 Use the following method if you are in a different activity/fragment, delegate ResultProctoringInfo received earlier. </h3>
 <p>         
