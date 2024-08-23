@@ -46,11 +46,11 @@
     
     proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration);
     
-    proctorSdk.setupStreamingDetails ( "1" , "0" , "5000" , "0" , "1" );
+    proctorSdk.setupStreamingDetails ( streamRecordingMode, streamingType, imageInterval, proctoringType, ufmType );
     
-    proctorSdk.enableSettings ( "1" , "1" , "1" , "0" , "1" , "1" , "1" , "1" , "1" , "1" , "1" );
+    proctorSdk.enableSettings ( enableAi, enableMic, enableLocation, enableRoomSanitisation, enableUfmCount, enableUfmMatrix, enableSuspendOpt, enableSecondaryCam, unfairMeans, enableFaceVerification, enableAutoEventMessaging );
     
-    proctorSdk.enableUFMSettings ( "1" , "1" , "1" , "1" , "1" , "1" , "1" );
+    proctorSdk.enableUFMSettings ( fm, fnp, mfd, sfl, pr, vd, od, la );
 </p>
 
 <h3> 2.4 Start Validation Process </h3>
@@ -90,11 +90,11 @@
     
     ProctorSDK proctorSdk = new ProctorSDK ();
     
-    proctorSdk.setupClientConfiguration("https://vikrant.thinkexam.com", "vikrant.thinkexam.com");
+    proctorSdk.setupClientConfiguration ( clientBaseURL, clientRequestUrl );
+
+    proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration);
     
-    proctorSdk.setupTestDetails("Test Tarun 10Jun2024", "10-06-2024", "", "100");
-    
-    proctorSdk.startProctoring ( this, parentLayout,resultProctoringInfo);
+    proctorSdk.startProctoring ( this, rootView,resultProctoringInfo);
 </p>
 <h3> 3.3 Use lifecycle methods </h3>
 <p> 
