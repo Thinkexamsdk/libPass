@@ -42,9 +42,9 @@
     
     proctorSdk.setupClientConfiguration ( clientBaseURL, clientRequestUrl );
 
-    proctorSdk.setupStudentDetails ( studentDataPojo.getSTUDENT_NAME () , "tarun1245663@gamil.com" , "https://dn2d9bgg1d2qf.cloudfront.net/studentTestLiveImages/535/13/32956902/1/13_1714634403903.png" );
+    proctorSdk.setupStudentDetails ( studentName , studentEmail, studentImageUrl );
     
-    proctorSdk.setupTestDetails ( "Test Tarun 10Jun2024" , "10-06-2024" , "" , "100" );
+    proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration);
     
     proctorSdk.setupStreamingDetails ( "1" , "0" , "5000" , "0" , "1" );
     
