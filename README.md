@@ -39,7 +39,7 @@
              
     proctorSdk.registerBroadcast ( this );
     
-    proctorSdk.setupClientConfiguration ( "https://vikrant.thinkexam.com" , "vikrant.thinkexam.com" );
+    proctorSdk.setupClientConfiguration ( String clientBaseURL, String clientRequestUrl);
 
     proctorSdk.setupStudentDetails ( studentDataPojo.getSTUDENT_NAME () , "tarun1245663@gamil.com" , "https://dn2d9bgg1d2qf.cloudfront.net/studentTestLiveImages/535/13/32956902/1/13_1714634403903.png" );
     
