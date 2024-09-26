@@ -44,7 +44,7 @@
 
     proctorSdk.setupStudentDetails ( studentName , studentEmail, studentImageUrl );
     
-    proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration);
+    proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration, attemptCount);
     
     proctorSdk.setupStreamingDetails ( streamRecordingMode, streamingType, imageInterval, proctoringType, ufmType );
     
