@@ -32,7 +32,7 @@
 <h3> 2.2 Create a ProctorSDK object </h3>
 <p>
             
-    ProtorSDK proctorSdk = new ProctorSDK();
+    ProctorSDK proctorSdk = new ProctorSDK();
 </p>
 
 <h3> 2.3 Setup Proctoring details </h3>
