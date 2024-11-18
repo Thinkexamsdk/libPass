@@ -31,7 +31,10 @@
 
 <h3> 2.2.1 Add Overlay Permission </h3>
 <p>
-    Add android.permission.ACTION_MANAGE_OVERLAY_PERMISSION  in AndroidManifes.xml    
+    Add android.permission.SYSTEM_ALERT_WINDOW  in AndroidManifes.xml   
+   
+    Add android.permission.ACTION_MANAGE_OVERLAY_PERMISSION  in AndroidManifes.xml   
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 </p>
 
   <h3> 2.2.2 Create a ProctorSDK object </h3>
