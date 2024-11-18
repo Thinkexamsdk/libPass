@@ -21,7 +21,7 @@
 <h3>1.2 Add dependency to module's build.gradle:</h3>
 <p>
     
-    dependencies {implementation("com.ginger.te:sdk:0.0.144")} 
+    dependencies {implementation("com.ginger.te:sdk:1.0.01")} 
 </p>
 
 <h2> 2.Getting started</h2>
