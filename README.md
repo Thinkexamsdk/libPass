@@ -31,8 +31,7 @@
 
 <h3> 2.2.1 Add Overlay Permission </h3>
 <p>
-    Add the following permission in AndroidManifes.xml    
-    "<uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" /> "     
+    Add android.permission.ACTION_MANAGE_OVERLAY_PERMISSION  in AndroidManifes.xml    
 </p>
 
   <h3> 2.2.2 Create a ProctorSDK object </h3>
