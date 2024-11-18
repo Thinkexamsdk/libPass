@@ -48,7 +48,7 @@
     
     proctorSdk.setupStreamingDetails ( streamRecordingMode, streamingType, imageInterval, proctoringType, ufmType );
     
-    proctorSdk.enableSettings ( enableAi, enableMic, enableLocation, enableRoomSanitisation, enableUfmCount, enableUfmMatrix, enableSuspendOpt, enableSecondaryCam, unfairMeans, enableFaceVerification, enableAutoEventMessaging );
+    proctorSdk.enableSettings(String aiEnable, String enableMic, String enableLocation, String enableRoomSanitisation, String enableUfmCount, String enableUfmMatrix, String enableSuspendOpt, String enableSecondaryCam, String unfairMeans, String enableFaceVerification, String enableAutoEventMessaging, String enableIdAuth, String showNetwork, String hideCameraView, String fldTerminateTestOnPopUp, String enableAsService, String allowAuthenticationAttempts) ;
     
     proctorSdk.enableUFMSettings ( fm, fnp, mfd, sfl, pr, vd, od, la );
 </p>
@@ -68,15 +68,23 @@
     @Override
     public void onProctoringInfoSuccess(ResultProctoringInfo resultProctoringInfo) {
         if (resultProctoringInfo != null){
-            //Start Proctoring
-          
+            //Start Proctoring         
         }
-
     }
 
     @Override
     public void onProctoringInfoFailure(String errorMessage) {
         Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onTestExit(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onUfmTerminate(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 </p>
 <h2> 3.Start Proctoring</h2>
