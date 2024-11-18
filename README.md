@@ -29,20 +29,29 @@
 <p>Register your application by following the steps at Register your app with Thinkexam.com
 </p>
 
-<h3> 2.2.1 Add Overlay Permission </h3>
+<h3> 2.2.1 Add System Alert Permission </h3>
 <p>
-    Add android.permission.SYSTEM_ALERT_WINDOW  in AndroidManifes.xml   
+    Add android.permission.SYSTEM_ALERT_WINDOW  in AndroidManifes.xml     
 </p>
 
-  <h3> 2.2.2 Create a ProctorSDK object </h3>
+  <h3> 2.2.2 Add File Provider </h3>
   <p>
-    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />      
-    ProctorSDK proctorSdk = new ProctorSDK();
+    <provider
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="${applicationId}.provider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths" />
+</provider>   
+    
 </p>
 
 <h3> 2.3 Setup Proctoring details </h3>
 <p>           
-             
+    ProctorSDK proctorSdk = new ProctorSDK();
+    
     proctorSdk.registerBroadcast ( this );
     
     proctorSdk.setupClientConfiguration ( clientBaseURL, clientRequestUrl );
