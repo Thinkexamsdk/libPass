@@ -35,7 +35,7 @@
 </p>
 
   <h3> 2.2.2 Add File Provider </h3>
-  <p>
+ 
     <provider
     android:name="androidx.core.content.FileProvider"
     android:authorities="${applicationId}.provider"
@@ -46,7 +46,6 @@
         android:resource="@xml/provider_paths" />
 </provider>   
     
-</p>
 
 <h3> 2.3 Setup Proctoring details </h3>
 <p>           
