@@ -29,9 +29,16 @@
 <p>Register your application by following the steps at Register your app with Thinkexam.com
 </p>
 
-<h3> 2.2 Create a ProctorSDK object </h3>
+<h3> 2.2.1 Create a ProctorSDK object </h3>
 <p>
-            
+    Include the following permission in AndroidManifes.xml
+    
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />      
+</p>
+
+  <h3> 2.2.2 Create a ProctorSDK object </h3>
+  <p>
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />      
     ProctorSDK proctorSdk = new ProctorSDK();
 </p>
 
