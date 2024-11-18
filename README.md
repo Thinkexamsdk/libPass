@@ -98,11 +98,17 @@
     
     ProctorSDK proctorSdk = new ProctorSDK ();
     
+    proctorSdk.registerBroadcast ( this );
+    
     proctorSdk.setupClientConfiguration ( clientBaseURL, clientRequestUrl );
 
     proctorSdk.setupTestDetails ( testName , testStartDate , testStartTime , testDuration);
     
     proctorSdk.startProctoring ( this, rootView,resultProctoringInfo);
+
+    proctorSDK.setTestSubmitListener(this);
+    
+    proctorSDK.setProctoringInfoListener(this);
 </p>
 <h3> 3.3 Use lifecycle methods </h3>
 <p> 
