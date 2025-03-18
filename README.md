@@ -20,7 +20,7 @@
 
 <h3>1.2 Add dependency to module's build.gradle:</h3>
 <p>
-    implementation("com.ginger.te:sdk:1.0.01")
+    implementation("com.ginger.te:sdk:00111")
 </p>
 
 <h2> 2.Getting started</h2>
